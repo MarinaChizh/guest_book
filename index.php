@@ -10,4 +10,28 @@
 <body>
     Hello. Marina
 </body>
+<br>
 </html>
+<?php
+
+echo "HELLO";
+echo "<br>";
+echo "1,2,3";
+echo "<br>";
+
+for($i=1;$i<=10;$i++)
+print $i.',';
+
+echo "<br>";
+$x=0;
+while ($x++<10) echo $x;
+echo "<br>";
+$array=[1,2,3,4,5,6,7,8,9,10];
+foreach ($array as $value){
+    echo $value;
+}
+
+
+
+
+?>
