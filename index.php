@@ -31,7 +31,7 @@ foreach ($array as $value){
     echo $value;
 }
 
-
+echo "<img src='https://img1.goodfon.ru/original/1920x1200/a/9c/schenok-malenkiy.jpg'>"; 
 
 
 ?>
