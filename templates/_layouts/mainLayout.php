@@ -23,15 +23,15 @@
         <a class="nav-link" href="?t=site&a=About">About us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?t=TicTacToe&a=ShowField">Крестики-Нолики<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?t=FeedBack&a=ShowForm">FeedBack<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Tables
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="?t=tableCategories&a=showTable">Table1</a>
-          <a class="dropdown-item" href="?t=tableProduct&a=showTable">Table2</a>
+          <a class="dropdown-item" href="?t=categories&a=showTable">Table1</a>
+          <a class="dropdown-item" href="?t=product&a=showTable">Table2</a>
         </div>
       </li>
     </ul>

@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controller;
+
 class SiteController extends Controller {
 
     function actionHome () {
