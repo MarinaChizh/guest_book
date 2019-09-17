@@ -11,7 +11,7 @@ class Factory
 
    public static function newFileStorage($fileName) 
    {
-    preg_match('/\.(.*)$/i', $fileName, $match);
+    preg_match('/\.([^\.]*)$/iu', $fileName, $match);
     $type = $match[1];
     switch ($type) {
         case 'php':
@@ -20,6 +20,10 @@ class Factory
 
         case 'txt':
             return new SerializeStorage($fileName);
+            break;
+
+        case 'csv':
+            return new CsvStorage($fileName);
             break;
 
         case 'json':

@@ -15,6 +15,7 @@ class FeedBackController extends Controller {
     {
         parent::__construct();
         $this->view->setViewPath(__DIR__.'/../../templates/FeedBack/');
+        $this->view->setLayoutsPath(__DIR__.'/../../templates/_layouts/emptyLayout.php');
         $this->fileStorage = Factory::newFileStorage(Config::FILE_NAME);
         // echo get_class($this->fileStorage);
     }
@@ -32,7 +33,7 @@ class FeedBackController extends Controller {
     {
         // print_r ($_POST);
         $this->fileStorage->add($_POST);
-        $this->redirect('?t='.$this->classNameNP().'&a=thanks');
+        $this->redirect('/thanks');
     }
 
     public function actionThanks() {

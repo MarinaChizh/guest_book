@@ -4,17 +4,13 @@ namespace App\Core;
 
 class Config {
 
-    public const FILE_NAME = __DIR__.'\\data.php';
-
-    // public static $save_feedback = '\App\Model\DataStorage\PhpStorage';
-    // public static $file_type = 'php';
-
-    // public static $save_feedback = '\App\Model\DataStorage\SerializeStorage';
-    // public static $file_type = 'txt';
-
-    // public static $save_feedback = '\App\Model\DataStorage\JsonStorage';
-    // public static $file_type = 'json';
+    public const FILE_NAME = __DIR__.'/../../storage/data.json';
+    public const DATA_USERS = __DIR__.'/../../src/core/users.json';
+    public const USERS_RIGHTS = __DIR__.'/../../src/core/rights.json';
+    public const DEFAULT_CONTROLLER = 'FeedBack';
+    public const DEFAULT_ACTION = 'ShowForm';
 
 }
+
 
 ?>
