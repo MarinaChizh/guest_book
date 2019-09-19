@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Kelly+Slab|Luckiest+Guy|Roboto+Slab");
 body {
-  background-color: aqua;
-  color: red;
+  background-color: #F8F9FA;
+  font-family: 'Roboto Slab', serif;
 }
 
 body h1 {
-  font-family: 'Roboto Slab', serif;
+  color: #007BFF;
 }
 
 #maincontent {
@@ -31,81 +31,7 @@ body h1 {
 }
 
 .user_name {
-  color: red;
+  color: coral;
   text-align: right;
   margin-right: 20px;
-}
-
-.feedBackForm {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.feedBackForm input,
-.feedBackForm textarea {
-  font-family: 'Roboto Slab', serif;
-  color: #666666;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  border: 2px solid #C4C4C4;
-  font-size: 0.9em;
-  width: 300px;
-  padding: 5px 0.5%;
-}
-
-.feedBackForm input:hover, .feedBackForm input:focus,
-.feedBackForm textarea:hover,
-.feedBackForm textarea:focus {
-  border: 2px solid #6DC11A;
-}
-
-.feedBackForm textarea {
-  resize: vertical;
-  min-height: 170px;
-}
-
-.feedBackForm .feedBackButton {
-  font-family: 'Roboto Slab', serif;
-  color: white;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  border-bottom: 5px solid #2B8F16;
-  font-size: 0.9em;
-  width: 100px;
-  padding: 5px 0;
-  background-color: #6DC11A;
-  cursor: pointer;
-}
-
-.feedBackForm .feedBackButton:hover {
-  border-bottom: 3px solid #2B8F16;
-}
-
-.feedBackForm select {
-  font-family: 'Roboto Slab', serif;
-  color: #666666;
-  width: 45px;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  margin-bottom: 20px;
-  border: 2px solid #C4C4C4;
-  font-size: 0.9em;
-  padding: 2px 5px;
-}
-
-.feedBackForm select:hover, .feedBackForm select:focus {
-  border: 2px solid #6DC11A;
 }

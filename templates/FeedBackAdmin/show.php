@@ -1,4 +1,4 @@
-<table border=1>
+<table class="table table-striped table-dark">
 <?php 
 
 
@@ -7,7 +7,7 @@ foreach ($data as $id => $row) {
     foreach ($row as $value) {
         echo "<td>$value</td>";
     }
-    echo "<td><a href='$delURL$id'>$id</a></td></tr>";
+    echo "<td><a class='btn btn-info btn-sm' href='$delURL$id'>DELETE</a></td></tr>";
 }
 
 ?>
