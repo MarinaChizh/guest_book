@@ -7,13 +7,6 @@ abstract class CrudEntity implements StorageInterface
 
     protected $file_name;
 
-    // public function checkFileExists($file_content = '') 
-    // {
-    //     if (!file_exists($this->file_name)) {
-    //         file_put_contents($this->file_name, $file_content);
-    //     }
-    // }
-
     public function get() 
     {
         if (!file_exists($this->file_name)) {

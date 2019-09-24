@@ -4,8 +4,9 @@ namespace App\Controller;
 
 session_start();
 
-use App\Model\DataStorage\Factory;
 use App\Core\Config;
+use App\Model\DataStorage\DB_entity;
+use mysqli;
 
 
 class AuthController extends Controller
@@ -15,7 +16,7 @@ class AuthController extends Controller
     {
         parent::__construct();
         $this->view->setViewPath(__DIR__ . '/../../templates/Auth/');
-        $this->view->setLayoutsPath(__DIR__.'/../../templates/_layouts/emptyLayout.php');
+        $this->view->setLayoutsPath(__DIR__ . '/../../templates/_layouts/emptyLayout.php');
     }
 
     public function actionLoginForm()
@@ -28,18 +29,30 @@ class AuthController extends Controller
 
     public function actionCheckLogin()
     {
+        $usersTable = new DB_entity(
+            new mysqli(
+                Config::HOST,
+                Config::USER,
+                Config::PASSWORD,
+                Config::DATA_BASE
+            ),
+            Config::ADMIN_TABLE
+        );
+
+        $res = $usersTable
+            ->add_where_condition("login LIKE '$_POST[login]' and password='$_POST[password]'")
+            ->query();
+//print_r($_POST);
         $users_array = json_decode(file_get_contents(Config::DATA_USERS), true);
-        
-        if (
-            isset($_POST['login']) &&
-            $_POST['password'] == $users_array[$_POST['login']]
-        ) {
+
+        if (!empty($res)) {
             $_SESSION['autorized_user'] = $_POST['login'];
             $this->redirect('/dashboard');
         } else {
             echo "Неверный логин или пароль!";
             exit();
         }
+
     }
 
 

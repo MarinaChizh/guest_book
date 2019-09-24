@@ -14,7 +14,6 @@ class Router
     {
         $uriData = URL::getInstance()->decodeUri($_SERVER['REQUEST_URI']);
         
-
         // print_r($uriData);
         if (!empty($uriData)) {
             $_GET = array_merge($_GET, $uriData['vars']);
